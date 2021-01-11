@@ -2,6 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>JS + CSS Clock</title>
 
 		<script src="./script.js" defer></script>
@@ -37,7 +38,9 @@
 
 			.clock {
 				width: 30rem;
+				max-width: 80vw;
 				height: 30rem;
+				max-height: 80vw;
 				border: 20px solid white;
 				border-radius: 50%;
 				margin: 50px auto;
@@ -50,6 +53,12 @@
 					0 0 10px rgba(0,0,0,0.2);
 			}
 
+			@media (max-width: 475px) {
+				.clock {
+					box-sizing: border-box;
+					border-width: 2vw;
+				}
+			}
 			.clock-face {
 				position: relative;
 				width: 100%;
